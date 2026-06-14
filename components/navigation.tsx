@@ -43,7 +43,9 @@ export function Navigation() {
       <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
         <Link href="/" className="flex flex-col" onClick={() => setMenuOpen(false)}>
           <span className="font-mono text-2xl lg:text-3xl tracking-[0.25em] text-foreground uppercase leading-none">Blackstar</span>
-          <span className="text-xs lg:text-sm tracking-[0.3em] uppercase text-primary mt-1">Flight Simulations</span>
+          <span className="block w-full text-sm lg:text-base tracking-[0.3em] lg:tracking-[0.45em] text-justify [text-align-last:justify] uppercase text-primary mt-1.5">
+            Flight Simulations
+          </span>
         </Link>
 
         {/* Desktop nav */}

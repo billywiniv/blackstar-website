@@ -70,7 +70,7 @@ export function HardwareSection() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-xl md:text-2xl tracking-[0.25em] uppercase text-primary mb-5">Hardware Engineering</p>
+            <p className="text-xl md:text-2xl tracking-[0.25em] uppercase text-primary mb-5">The Eclipse AATD</p>
             <h2 className="font-mono text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight uppercase leading-[1.05] mb-8">
               Built for realism.
             </h2>
