@@ -11,7 +11,7 @@ export function ClosingCta() {
       <div className="absolute inset-0 glow-orange pointer-events-none" aria-hidden />
       <div
         ref={ref}
-        className={`relative max-w-4xl mx-auto text-center transition-all duration-1000 ${
+        className={`relative max-w-3xl mx-auto text-center transition-all duration-1000 ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >

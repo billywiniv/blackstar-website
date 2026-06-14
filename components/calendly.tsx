@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils"
  * Calendly "Blackstar Consultation" event. Theming params match the site
  * (near-black background, light text, orange accent) so the widget feels native.
  */
-// Branded Blackstar Flight Simulations team event (round-robin).
-// hide_event_type_details hides Calendly's left panel, which carries the
-// org-level Community Aviation company logo (not overridable per-team on this
-// plan). This leaves only the calendar, framed by our own page branding.
+// Branded Blackstar Flight Simulations team event (round-robin). Calendar-only
+// (hide_event_type_details) to keep the org-level Community Aviation logo out of
+// the embed. Calendly renders this as a fixed-width column, so the wrapper
+// scales it up to fill the booking card.
 const BASE_URL = "https://calendly.com/blackstar-flight/consultation"
 export const CALENDLY_URL =
   `${BASE_URL}?hide_gdpr_banner=1&hide_event_type_details=1&background_color=0a0a0a&text_color=e8e4de&primary_color=ff4f00`
@@ -71,7 +71,9 @@ export function BookButton({ children = "Book a Consultation", className, varian
   const open = () => {
     loadCalendly()
       .then(() => window.Calendly?.initPopupWidget({ url: CALENDLY_URL }))
-      .catch(() => window.open(CALENDLY_URL, "_blank", "noopener,noreferrer"))
+      // If the popup widget can't load, scroll to the inline embed rather than
+      // linking out to an external Calendly booking page.
+      .catch(() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" }))
   }
 
   return (
@@ -110,7 +112,18 @@ export function CalendlyInline({ className }: { className?: string }) {
     )
   }
 
-  // A *definite* height is required: Calendly's iframe is height:100%, which
-  // collapses to the 150px HTML default if the parent only has a min-height.
-  return <div ref={ref} className={cn("h-[760px] sm:h-[720px] w-full", className)} aria-label="Book a consultation" />
+  // Calendly's calendar-only embed renders at a fixed ~470px width, so widening
+  // the box only adds empty space. We instead give it that natural width and
+  // scale it up on larger screens to fill the card. A *definite* height is also
+  // required — Calendly's iframe is height:100%, which would otherwise collapse
+  // to the 150px HTML default.
+  return (
+    <div className={cn("flex justify-center overflow-hidden", className)}>
+      <div
+        ref={ref}
+        className="w-[470px] max-w-full h-[680px] sm:h-[620px] sm:[zoom:1.4]"
+        aria-label="Book a consultation"
+      />
+    </div>
+  )
 }
