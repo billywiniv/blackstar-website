@@ -7,12 +7,13 @@ import { cn } from "@/lib/utils"
  * Calendly "Blackstar Consultation" event. Theming params match the site
  * (near-black background, light text, orange accent) so the widget feels native.
  */
-// Branded Blackstar Flight Simulations team event (round-robin). Hosting it
-// under the team — rather than a personal event — means the booking page shows
-// Blackstar's own branding instead of the Community Aviation org logo.
+// Branded Blackstar Flight Simulations team event (round-robin).
+// hide_event_type_details hides Calendly's left panel, which carries the
+// org-level Community Aviation company logo (not overridable per-team on this
+// plan). This leaves only the calendar, framed by our own page branding.
 const BASE_URL = "https://calendly.com/blackstar-flight/consultation"
 export const CALENDLY_URL =
-  `${BASE_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=e8e4de&primary_color=ff4f00`
+  `${BASE_URL}?hide_gdpr_banner=1&hide_event_type_details=1&background_color=0a0a0a&text_color=e8e4de&primary_color=ff4f00`
 
 declare global {
   interface Window {
