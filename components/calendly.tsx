@@ -110,5 +110,7 @@ export function CalendlyInline({ className }: { className?: string }) {
     )
   }
 
-  return <div ref={ref} className={cn("min-h-[680px] w-full", className)} aria-label="Book a consultation" />
+  // A *definite* height is required: Calendly's iframe is height:100%, which
+  // collapses to the 150px HTML default if the parent only has a min-height.
+  return <div ref={ref} className={cn("h-[760px] sm:h-[720px] w-full", className)} aria-label="Book a consultation" />
 }
