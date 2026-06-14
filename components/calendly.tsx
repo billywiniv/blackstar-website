@@ -8,8 +8,12 @@ import { cn } from "@/lib/utils"
  * (near-black background, light text, orange accent) so the widget feels native.
  */
 const BASE_URL = "https://calendly.com/billywin/blackstar-consultation"
+// hide_event_type_details drops Calendly's left panel — which carries the
+// Community Aviation brand logo — so only the calendar shows, framed by our own
+// branding. (To instead keep the event details but drop just the logo, remove
+// that param and clear the brand logo in Calendly → Account → Branding.)
 export const CALENDLY_URL =
-  `${BASE_URL}?hide_gdpr_banner=1&background_color=0a0a0a&text_color=e8e4de&primary_color=ff4f00`
+  `${BASE_URL}?hide_gdpr_banner=1&hide_event_type_details=1&background_color=0a0a0a&text_color=e8e4de&primary_color=ff4f00`
 
 declare global {
   interface Window {
