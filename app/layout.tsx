@@ -18,8 +18,9 @@ const rajdhani = Rajdhani({
 })
 
 export const metadata: Metadata = {
-  title: 'BLACKSTAR | Flight Simulations',
-  description: 'The future of flight simulation. Immersive, precision-engineered cockpit experiences.',
+  title: 'BLACKSTAR | Integrated Flight Training Ecosystem',
+  description:
+    'The Blackstar ATD is the hub of a complete flight-training ecosystem — professional VR, live global navigation data, and a full training operating system, on one FAA-approved AATD that runs both Prepar3D and X-Plane.',
 }
 
 export const viewport: Viewport = {

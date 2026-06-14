@@ -1,58 +1,39 @@
 import Link from "next/link"
-
-const footerLinks = {
-  Connect: ["Contact", "Support"],
-}
+import { BookButton } from "@/components/calendly"
 
 export function SiteFooter() {
   return (
     <footer className="bg-card border-t border-border" id="footer">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-[10px] pb-12">
-        <div className="flex flex-col">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           {/* Brand */}
           <div className="flex flex-col">
-            <span className="font-mono text-base tracking-[0.3em] text-foreground uppercase">
-              Blackstar
-            </span>
-            <span className="text-[9px] tracking-[0.35em] uppercase text-primary">
-              Flight Simulations
-            </span>
+            <span className="font-mono text-lg tracking-[0.3em] text-foreground uppercase">Blackstar</span>
+            <span className="text-[10px] tracking-[0.35em] uppercase text-primary mb-4">Flight Simulations</span>
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+              The connected hub of a complete flight-training ecosystem.
+            </p>
           </div>
-          
-          {/* Connect Links */}
-          <div className="flex items-center gap-4 mt-3">
-            <span className="text-[10px] tracking-[0.3em] uppercase text-foreground">Connect:</span>
-            {footerLinks.Connect.map((link) => (
-              <Link
-                key={link}
-                href="#"
-                className="text-xs text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
-                {link}
-              </Link>
-            ))}
+
+          {/* Connect */}
+          <div className="flex flex-col gap-4">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-foreground">Connect</span>
+            <BookButton className="px-6 py-2.5 min-h-[44px] text-xs">Contact</BookButton>
+            <BookButton variant="outline" className="px-6 py-2.5 min-h-[44px] text-xs">Support</BookButton>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-            {"2026 BLACKSTAR Flight Simulations. All rights reserved."}
+        {/* Bottom bar */}
+        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+            2026 Blackstar Flight Simulations. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="#"
-              className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              Cookies
-            </Link>
-          </div>
+          <Link
+            href="/privacy"
+            className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+          >
+            Privacy
+          </Link>
         </div>
       </div>
     </footer>
