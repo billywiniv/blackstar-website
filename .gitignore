@@ -8,3 +8,9 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+
+# Next.js generated types
+next-env.d.ts
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
