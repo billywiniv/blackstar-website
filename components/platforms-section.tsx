@@ -14,22 +14,23 @@ export function PlatformsSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-sm tracking-[0.35em] uppercase text-primary mb-5">No Compromises</p>
+          <p className="text-xl md:text-2xl tracking-[0.25em] uppercase text-primary mb-5">Both Worlds</p>
           <h2 className="font-mono text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight uppercase leading-[1.05] text-balance mb-6">
-            One device. Both platforms.
+            One device. Two platforms.
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
-            A single Blackstar ATD runs on both Lockheed Martin Prepar3D and X-Plane — switchable at the flip of a
-            switch, on the same machine. No second device, no second purchase. Varjo, RealNav Data, Community Aviation,
-            and Atlas all work on either engine.
+            Most simulators lock you into a single flight engine. A Blackstar ATD runs both Lockheed Martin Prepar3D
+            and X-Plane on the same machine — switch between them in an instant, with no second device and no second
+            purchase. And every part of the ecosystem — the Varjo headset, navigation data, the operating system, and
+            the Atlas instructor station — works identically on either engine.
           </p>
         </div>
 
         {/* Platform pairing with a central "switch" motif */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-0 items-stretch relative">
           {[
-            { name: "Prepar3D", tagline: "Lockheed Martin", image: "/images/prepar3d.jpg" },
-            { name: "X-Plane", tagline: "Advanced Flight Model", image: "/images/xplane.jpg" },
+            { name: "Prepar3D", tagline: "Lockheed Martin", image: "/images/prepar3d-hero.jpg" },
+            { name: "X-Plane", tagline: "Advanced Flight Model", image: "/images/xplane-hero.jpg" },
           ].map((p, i) => (
             <div
               key={p.name}

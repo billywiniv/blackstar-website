@@ -8,8 +8,8 @@ import { BookButton } from "@/components/calendly"
 const navLinks = [
   { label: "Ecosystem", href: "/#ecosystem" },
   { label: "Atlas", href: "/#atlas" },
-  { label: "Platforms", href: "/#platforms" },
-  { label: "Hardware", href: "/#hardware" },
+  { label: "Components", href: "/#ecosystem" },
+  { label: "Eclipse AATD", href: "/#hardware" },
   { label: "Timeline", href: "/timeline" },
 ]
 
@@ -42,22 +42,22 @@ export function Navigation() {
     >
       <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
         <Link href="/" className="flex flex-col" onClick={() => setMenuOpen(false)}>
-          <span className="font-mono text-lg tracking-[0.3em] text-foreground uppercase">Blackstar</span>
-          <span className="text-[10px] tracking-[0.35em] uppercase text-primary">Flight Simulations</span>
+          <span className="font-mono text-2xl lg:text-3xl tracking-[0.25em] text-foreground uppercase leading-none">Blackstar</span>
+          <span className="text-xs lg:text-sm tracking-[0.3em] uppercase text-primary mt-1">Flight Simulations</span>
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-9">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-base xl:text-lg tracking-[0.12em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {link.label}
             </Link>
           ))}
-          <BookButton className="px-6 py-2.5 min-h-[44px] text-xs" />
+          <BookButton className="px-6 py-2.5 min-h-[44px] text-sm" />
         </div>
 
         {/* Mobile toggle */}
@@ -81,7 +81,7 @@ export function Navigation() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="py-3 text-base tracking-[0.18em] uppercase text-foreground/90 hover:text-primary transition-colors border-b border-border/60"
+                className="py-3.5 text-lg tracking-[0.16em] uppercase text-foreground/90 hover:text-primary transition-colors border-b border-border/60"
               >
                 {link.label}
               </Link>
