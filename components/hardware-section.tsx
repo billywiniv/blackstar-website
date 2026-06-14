@@ -70,7 +70,7 @@ export function HardwareSection() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-sm tracking-[0.35em] uppercase text-primary mb-5">Hardware Engineering</p>
+            <p className="text-xl md:text-2xl tracking-[0.25em] uppercase text-primary mb-5">Hardware Engineering</p>
             <h2 className="font-mono text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight uppercase leading-[1.05] mb-8">
               Built for realism.
             </h2>
@@ -111,18 +111,18 @@ export function HardwareSection() {
 
         {/* Varjo XR-4 stat counters */}
         <div className="bg-card border border-border">
-          <p className="text-center text-xs tracking-[0.35em] uppercase text-muted-foreground pt-8">
+          <p className="text-center text-base md:text-lg tracking-[0.25em] uppercase text-muted-foreground pt-8 px-4">
             The Visual System — Powered by <span className="text-primary">Varjo XR-4</span>
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex flex-col items-center justify-center py-10 px-4 text-center border-border ${
+                className={`flex flex-col items-center justify-center py-10 px-3 text-center border-border ${
                   i % 2 === 0 ? "border-r" : ""
                 } ${i < 2 ? "border-b lg:border-b-0" : ""} ${i < 3 ? "lg:border-r" : "lg:border-r-0"}`}
               >
-                <p className="font-mono text-3xl md:text-4xl lg:text-5xl text-primary mb-2">
+                <p className="font-mono text-3xl md:text-4xl lg:text-5xl text-primary mb-2 whitespace-nowrap">
                   <AnimatedStat value={stat.value} prefix={stat.prefix} suffix={stat.suffix} inView={inView} />
                 </p>
                 <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground">{stat.label}</p>

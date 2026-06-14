@@ -49,7 +49,7 @@ export function AtlasSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-sm tracking-[0.35em] uppercase text-primary mb-5">Atlas — The Instructor Station</p>
+          <p className="text-xl md:text-2xl tracking-[0.25em] uppercase text-primary mb-5">Atlas — The Instructor Station</p>
           <h2 className="font-mono text-3xl md:text-4xl lg:text-5xl text-foreground tracking-tight uppercase leading-[1.05] text-balance mb-6">
             Total control of every training session.
           </h2>

@@ -37,7 +37,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[100svh] px-6 py-28 text-center">
         <p
-          className="text-xs sm:text-sm tracking-[0.35em] uppercase text-primary mb-6 animate-fade-in"
+          className="text-lg sm:text-xl tracking-[0.3em] uppercase text-primary mb-6 animate-fade-in"
           style={{ animationDelay: "0.3s", opacity: 0 }}
         >
           Integrated Flight Training Ecosystem
@@ -54,8 +54,9 @@ export function HeroSection() {
           className="mt-8 text-lg md:text-xl max-w-2xl leading-relaxed text-foreground/85 animate-fade-in"
           style={{ animationDelay: "0.9s", opacity: 0 }}
         >
-          The Blackstar ATD is the hub of a complete flight-training ecosystem — professional VR, live global
-          navigation data, and a full training operating system, on one device that runs both Prepar3D and X-Plane.
+          The Blackstar ATD is the hub of a complete flight-training ecosystem — immersive VR, live global
+          navigation data, and a full training operating system — on one device that runs either Prepar3D or X-Plane
+          at the flip of a switch.
         </p>
 
         <div
@@ -70,13 +71,6 @@ export function HeroSection() {
             Explore the Ecosystem
           </a>
         </div>
-
-        <p
-          className="mt-8 text-xs tracking-[0.3em] uppercase text-muted-foreground animate-fade-in"
-          style={{ animationDelay: "1.45s", opacity: 0 }}
-        >
-          <span className="text-primary">●</span> FAA-Approved AATD
-        </p>
       </div>
 
       {/* Scroll indicator */}
