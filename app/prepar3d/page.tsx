@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata = {
-  title: "PREPAR3D | BLACKSTAR Flight Simulations",
+  title: "PREPAR3D | BLACKSTAR Flight Simulation",
   description: "Professional-grade flight simulation powered by Lockheed Martin's PREPAR3D platform.",
 }
 

@@ -16,10 +16,11 @@ export function ClosingCta() {
         }`}
       >
         <h2 className="font-mono text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight uppercase leading-[1.0] mb-6">
-          See it for yourself.
+          See if it&rsquo;s for you.
         </h2>
         <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto mb-12">
-          Book a consultation and we&rsquo;ll show you how a Blackstar ATD fits into your training program.
+          Book a consultation and let&rsquo;s talk about how a Blackstar ATD would integrate with your flight training
+          program.
         </p>
 
         <div className="bg-card border border-border p-2 sm:p-4">

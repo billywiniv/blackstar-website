@@ -9,7 +9,7 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="flex flex-col">
             <span className="font-mono text-lg tracking-[0.3em] text-foreground uppercase">Blackstar</span>
-            <span className="text-[10px] tracking-[0.35em] uppercase text-primary mb-4">Flight Simulations</span>
+            <span className="text-[10px] tracking-[0.35em] uppercase text-primary mb-4">Flight Simulation</span>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               The connected hub of a complete flight-training ecosystem.
             </p>
@@ -26,7 +26,7 @@ export function SiteFooter() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
-            2026 Blackstar Flight Simulations. All rights reserved.
+            2026 Blackstar Flight Simulation. All rights reserved.
           </p>
           <Link
             href="/privacy"
