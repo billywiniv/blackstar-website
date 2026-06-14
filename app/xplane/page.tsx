@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata = {
-  title: "X-PLANE | BLACKSTAR Flight Simulations",
+  title: "X-PLANE | BLACKSTAR Flight Simulation",
   description: "Experience the most accurate flight model in civilian simulation with X-PLANE.",
 }
 

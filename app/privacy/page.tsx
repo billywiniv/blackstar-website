@@ -72,7 +72,7 @@ To exercise these rights, please contact us using the information provided below
     title: "Contact Us",
     content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
 
-BLACKSTAR Flight Simulations
+BLACKSTAR Flight Simulation
 Email: privacy@blackstarflightsim.com
 Address: 123 Aviation Way, Suite 400, San Francisco, CA 94102`,
   },
@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
       <section className="px-6 lg:px-12 pb-12">
         <div className="max-w-4xl mx-auto">
           <p className="text-muted-foreground leading-relaxed">
-            BLACKSTAR Flight Simulations (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to
+            BLACKSTAR Flight Simulation (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to
             protecting your privacy. This Privacy Policy explains how we
             collect, use, disclose, and safeguard your information when you
             visit our website or use our flight simulation products and

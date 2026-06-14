@@ -44,7 +44,7 @@ export function Navigation() {
         <Link href="/" className="flex flex-col" onClick={() => setMenuOpen(false)}>
           <span className="font-mono text-2xl lg:text-3xl tracking-[0.25em] text-foreground uppercase leading-none">Blackstar</span>
           <span className="block w-full text-sm lg:text-base tracking-[0.3em] lg:tracking-[0.45em] text-justify [text-align-last:justify] uppercase text-primary mt-1.5">
-            Flight Simulations
+            Flight Simulation
           </span>
         </Link>
 

@@ -121,7 +121,7 @@ export function CalendlyInline({ className }: { className?: string }) {
     <div className={cn("flex justify-center overflow-hidden", className)}>
       <div
         ref={ref}
-        className="w-[470px] max-w-full h-[680px] sm:h-[620px] sm:[zoom:1.4]"
+        className="w-[470px] max-w-full h-[600px] sm:h-[500px] sm:[zoom:1.4]"
         aria-label="Book a consultation"
       />
     </div>

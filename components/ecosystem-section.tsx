@@ -134,7 +134,7 @@ export function EcosystemSection() {
               style={{ transitionDelay: `${300 + i * 120}ms` }}
             >
               <c.icon size={36} className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-2">{c.category}</p>
+              <p className="text-xl sm:text-2xl lg:text-3xl tracking-[0.15em] uppercase text-muted-foreground mb-2">{c.category}</p>
               <h3 className="font-mono text-3xl lg:text-4xl text-foreground uppercase tracking-wide mb-4">{c.title}</h3>
               <p className="text-base lg:text-lg leading-relaxed text-muted-foreground">{c.body}</p>
             </article>
