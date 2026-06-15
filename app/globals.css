@@ -82,6 +82,19 @@ html {
   }
 }
 
+/* Clickable hub-and-spoke node: highlight its label on hover/focus. */
+.hub-link {
+  cursor: pointer;
+  outline: none;
+}
+.hub-link text {
+  transition: fill 0.3s ease;
+}
+.hub-link:hover text,
+.hub-link:focus-visible text {
+  fill: hsl(var(--primary));
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -123,4 +136,18 @@ html {
 
 .animate-slide-down {
   animation: slideDown 0.6s ease-out forwards;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
